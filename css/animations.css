@@ -1,0 +1,89 @@
+/* =========================================================
+   NOIR — Animations
+   Everything that hides content is scoped to `.js`, so the page
+   stays fully readable if JavaScript fails.
+   ========================================================= */
+
+@keyframes scroll-line { 0% { transform: translateY(-100%); } 100% { transform: translateY(200%); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes sheen { from { background-position: 0% 0; } to { background-position: 100% 0; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes hero-zoom { from { transform: scale(1.18); } to { transform: scale(1.04); } }
+@keyframes hero-clip { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes char-in { from { transform: translateY(112%) rotate(4deg); } to { transform: none; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* ---------- Page entrance ---------- */
+.js .nav { opacity: 0; transform: translateY(-24px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out), background .6s var(--ease-out), height .6s var(--ease-out), backdrop-filter .6s, border-color .6s; }
+.js .is-ready .nav { opacity: 1; transform: none; transition-delay: 1.5s, 1.5s, 0s, 0s, 0s, 0s; }
+
+.js .hero__img { clip-path: inset(100% 0 0 0); }
+.js .is-ready .hero__img { animation: hero-clip 1.7s var(--ease-io) .1s forwards; }
+.js .hero__img img { transform: scale(1.18); }
+.js .is-ready .hero__img img { animation: hero-zoom 3.2s var(--ease-out) .1s forwards; }
+.js .hero__shade { opacity: 0; transition: opacity 1.6s ease 1s; }
+.js .is-ready .hero__shade { opacity: 1; }
+
+/* Split headline: each word masks its characters */
+.split-word { display: inline-block; overflow: hidden; vertical-align: top; padding: .06em .02em .14em; margin: -.06em -.02em -.14em; white-space: nowrap; }
+.split-char { display: inline-block; will-change: transform; }
+.js .split-char { transform: translateY(112%) rotate(4deg); }
+.js .is-ready .split-char { animation: char-in 1.15s var(--ease-out) forwards; animation-delay: calc(1.05s + var(--c) * 34ms + var(--l, 0) * 140ms); }
+
+.js .hero__eyebrow, .js .hero__lead, .js .hero__actions > *, .js .hero__meta li, .js .hero__scroll { opacity: 0; }
+.js .is-ready .hero__eyebrow { animation: fade-up 1s var(--ease-out) .9s forwards; }
+.js .is-ready .hero__lead { animation: fade-up 1.1s var(--ease-out) 1.9s forwards; }
+.js .is-ready .hero__actions > * { animation: fade-up 1s var(--ease-out) forwards; animation-delay: calc(2.1s + var(--i, 0) * 120ms); }
+.js .is-ready .hero__meta li { animation: fade-up 1s var(--ease-out) forwards; animation-delay: calc(1.7s + var(--i, 0) * 100ms); }
+.js .is-ready .hero__scroll { animation: fade-up 1s var(--ease-out) 2.5s forwards; }
+
+/* ---------- Scroll reveals (Intersection Observer adds .is-in) ---------- */
+.js [data-reveal="up"] { opacity: 0; transform: translateY(40px); transition: opacity 1.1s var(--ease-out), transform 1.2s var(--ease-out); transition-delay: var(--d, 0s); }
+.js [data-reveal="up"].is-in { opacity: 1; transform: none; }
+
+/* Text mask reveal */
+.js [data-reveal="lines"] .line > span { transform: translateY(112%); transition: transform 1.25s var(--ease-out); transition-delay: calc(var(--i, 0) * 110ms + var(--d, 0s)); }
+.js [data-reveal="lines"].is-in .line > span { transform: none; }
+
+/* Image clip reveal */
+/* The clip lives on the inner frame: the observed figure itself stays unclipped,
+   otherwise IntersectionObserver treats a fully clipped target as invisible. */
+.js [data-reveal="img"] > .frame, .js [data-reveal="img"] > .g-item__btn { clip-path: inset(0 0 100% 0); transition: clip-path 1.5s var(--ease-io); transition-delay: var(--d, 0s); }
+.js [data-reveal="img"].is-in > .frame, .js [data-reveal="img"].is-in > .g-item__btn { clip-path: inset(0 0 0 0); }
+.js [data-reveal="img"] > .g-item__btn { clip-path: inset(0 0 100% 0); }
+.js [data-reveal="img"] .caption { opacity: 0; transition: opacity 1s .9s var(--ease-out); }
+.js [data-reveal="img"].is-in .caption { opacity: .65; }
+.js [data-reveal="img"] .frame img, .js [data-reveal="img"] .g-item__btn img { transform: scale(1.25); transition: transform 2s var(--ease-out); }
+.js [data-reveal="img"].is-in .frame img, .js [data-reveal="img"].is-in .g-item__btn img { transform: scale(1); }
+/* after reveal, hand control back to hover/parallax */
+.js [data-reveal="img"].is-done .frame img, .js [data-reveal="img"].is-done .g-item__btn img { transition: transform 1.4s var(--ease-out); }
+.js [data-reveal="img"].is-done .frame:hover img, .js [data-reveal="img"].is-done .g-item:hover .g-item__btn img { transform: scale(1.06); }
+/* Parallax images are oversized so they can travel without exposing the frame */
+.frame img.has-parallax { position: absolute; left: 0; top: -7%; height: 114%; }
+
+/* Menu category transition */
+.menu__list { transition: opacity .32s var(--ease-out), transform .32s var(--ease-out); }
+.menu__list.is-out { opacity: 0; transform: translateY(14px); }
+.menu-item.is-entering { animation: fade-up .8s var(--ease-out) both; animation-delay: calc(var(--i, 0) * 70ms); }
+
+/* Decorative drift */
+.tag__dot { animation: drift 4s ease-in-out infinite; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .js .nav, .js .hero__img, .js .hero__img img, .js .hero__shade, .js .split-char,
+  .js .hero__eyebrow, .js .hero__lead, .js .hero__actions > *, .js .hero__meta li, .js .hero__scroll,
+  .js [data-reveal], .js [data-reveal] .line > span, .js [data-reveal="img"] .frame img, .js [data-reveal="img"] .g-item__btn img {
+    opacity: 1 !important; transform: none !important; clip-path: none !important;
+  }
+  .js [data-reveal="img"] > .frame, .js [data-reveal="img"] > .g-item__btn { clip-path: none !important; }
+  .js [data-reveal="img"] .caption { opacity: .65 !important; }
+  .marquee__track, .badge, .footer__word { animation: none !important; }
+  .hero__scroll-line::after { animation: none; }
+  .exp__panel { position: relative; }
+  .exp__bg img { height: 100%; }
+}

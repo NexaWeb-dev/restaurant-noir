@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOIR — Modern Luxury Dining</title>
+  <meta name="description" content="NOIR is a modern luxury restaurant in Bengaluru. An exploration of extraordinary flavours, thoughtful craftsmanship and unforgettable dining.">
+  <meta name="theme-color" content="#11110F">
+  <meta property="og:title" content="NOIR — Modern Luxury Dining">
+  <meta property="og:description" content="Where taste becomes an experience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">View</span></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" aria-label="NOIR — back to top">NOIR</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#discover" data-nav="discover">Discover</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#menu" data-nav="menu">Menu</a>
+      <a href="#story" data-nav="story">Our Story</a>
+      <a href="#gallery" data-nav="gallery">Gallery</a>
+      <a href="#reservations" data-nav="reservations">Reservations</a>
+    </nav>
+    <a class="nav__cta" href="#reservations">Reserve</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" inert>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="#discover"><span>01</span>Discover</a>
+      <a href="#experience"><span>02</span>Experience</a>
+      <a href="#menu"><span>03</span>Menu</a>
+      <a href="#story"><span>04</span>Our Story</a>
+      <a href="#gallery"><span>05</span>Gallery</a>
+      <a href="#reservations"><span>06</span>Reservations</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>14 Lavelle Road, Bengaluru</p>
+      <p>Tue – Sun · From 8 AM</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-label="Welcome to NOIR">
+      <div class="hero__media">
+        <div class="hero__img">
+          <img src="assets/images/hero/hero-interior.jpg" alt="The NOIR dining room at dusk, with warm timber, tall windows and set tables" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+      <div class="hero__shade"></div>
+
+      <ul class="hero__meta" aria-label="Restaurant details">
+        <li>Modern Luxury Dining</li>
+        <li>Bengaluru, India</li>
+        <li>Est. 2019</li>
+      </ul>
+
+      <div class="hero__content">
+        <div class="hero__headline">
+          <p class="eyebrow eyebrow--light hero__eyebrow">NOIR — Table N° 01</p>
+          <h1 aria-label="Where Taste Becomes An Experience.">
+            <span class="hero__line" data-split>Where Taste</span>
+            <span class="hero__line hero__line--italic" data-split>Becomes</span>
+            <span class="hero__line" data-split>An Experience.</span>
+          </h1>
+        </div>
+        <div class="hero__aside">
+          <p class="hero__lead">An exploration of extraordinary flavours, thoughtful craftsmanship, and unforgettable dining.</p>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="#menu"><span>Explore Our Menu</span><i class="btn__arrow" aria-hidden="true"></i></a>
+            <a class="btn btn--ghost" href="#reservations"><span>Reserve Your Table</span><i class="btn__arrow" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#discover" aria-label="Scroll to discover">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ INTRODUCTION ============ -->
+    <section class="intro theme-light" id="discover" aria-labelledby="intro-title">
+      <div class="container intro__grid">
+        <div class="intro__head">
+          <p class="eyebrow" data-reveal="up">01 — Philosophy</p>
+          <h2 class="intro__title" id="intro-title" data-reveal="lines">
+            <span class="line"><span>More Than</span></span>
+            <span class="line"><span>A Meal.</span></span>
+            <span class="line line--indent"><span>A <em>Moment</em></span></span>
+            <span class="line line--indent"><span>Worth</span></span>
+            <span class="line"><span>Remembering.</span></span>
+          </h2>
+        </div>
+
+        <figure class="intro__fig intro__fig--tall" data-reveal="img">
+          <div class="frame frame--tall" data-cursor="Plate">
+            <img src="assets/images/restaurant/intro-plate.jpg" alt="A composed plate being served at a candle-lit table with wine glasses behind" loading="lazy" decoding="async" data-parallax="0.08">
+          </div>
+                    <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="badge__bg" cx="100" cy="100" r="99"/>
+          <defs><path id="badge-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#badge-circle" startOffset="0">NOIR · MODERN LUXURY DINING · BENGALURU ·</textPath></text>
+          <circle class="dot" cx="100" cy="100" r="3"/>
+        </svg>
+          <figcaption class="caption">Plate 01 — The first course, as it reaches the table.</figcaption>
+        </figure>
+
+        <figure class="intro__fig intro__fig--wide" data-reveal="img">
+          <div class="frame frame--wide">
+            <img src="assets/images/restaurant/intro-room.jpg" alt="Empty dining room with set tables and tall windows before service" loading="lazy" decoding="async" data-parallax="0.06">
+          </div>
+          <figcaption class="caption">Fig. 02 — The room, an hour before service.</figcaption>
+        </figure>
+
+        <div class="intro__copy">
+          <p class="intro__lead" data-reveal="up">NOIR began with a simple belief: that dining is the last true act of attention. Forty seats, one open pass, and a kitchen that edits every plate until only what matters remains.</p>
+          <div class="intro__principles" data-stagger>
+            <article data-reveal="up">
+              <h3>Philosophy</h3>
+              <p>We cook with restraint. Flavour, texture and memory — in that order. Nothing is on the plate to decorate it.</p>
+            </article>
+            <article data-reveal="up">
+              <h3>Hospitality</h3>
+              <p>Service here is felt, not performed. We anticipate, we remember, and we make the room feel like yours.</p>
+            </article>
+            <article data-reveal="up">
+              <h3>Ingredients</h3>
+              <p>Small farms, day-boat catch and heritage grains, reaching us within days. The season writes the menu.</p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fire</span><i></i><span>Patience</span><i></i><span>Provenance</span><i></i><span>Precision</span><i></i><span>Season</span><i></i>
+        <span>Fire</span><i></i><span>Patience</span><i></i><span>Provenance</span><i></i><span>Precision</span><i></i><span>Season</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ SIGNATURE DISHES ============ -->
+    <section class="sig theme-dark" id="signature" aria-labelledby="sig-title">
+      <div class="container">
+        <header class="sec-head">
+          <p class="eyebrow eyebrow--gold" data-reveal="up">02 — Signature Dishes</p>
+          <h2 class="sec-title" id="sig-title" data-reveal="lines">
+            <span class="line"><span>Plates we are</span></span>
+            <span class="line"><span>known <em>for.</em></span></span>
+          </h2>
+        </header>
+
+        <div class="sig__grid">
+          <!-- Dish 1 : featured -->
+          <article class="dish dish--1">
+            <span class="dish__num" aria-hidden="true">01</span>
+            <figure class="dish__fig" data-reveal="img">
+              <div class="frame frame--feature" data-cursor="Taste">
+                <img src="assets/images/dishes/steak-frites.jpg" alt="Seared striploin steak with a heap of herbed fries on a white plate" loading="lazy" decoding="async" data-parallax="0.1">
+              </div>
+            </figure>
+            <div class="dish__body">
+              <p class="tag" data-reveal="up"><span class="tag__dot"></span>Chef's Recommendation</p>
+              <h3 class="dish__name" data-reveal="lines"><span class="line"><span>Wagyu Striploin,</span></span><span class="line"><span><em>Bone-Marrow</em> Frites</span></span></h3>
+              <p class="dish__desc" data-reveal="up">Dry-aged for 28 days, seared over embers and rested in brown butter. Served with hand-cut frites and a sticky red-wine jus.</p>
+              <div class="dish__foot" data-reveal="up">
+                <span class="diet diet--non" title="Non-vegetarian"><i></i><span class="sr-only">Non-vegetarian</span></span>
+                <span class="price">₹4,200</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 2 -->
+          <article class="dish dish--2">
+            <span class="dish__num" aria-hidden="true">02</span>
+            <figure class="dish__fig" data-reveal="img">
+              <div class="frame frame--portrait" data-cursor="Taste">
+                <img src="assets/images/dishes/prawn-curry.jpg" alt="Tiger prawns over rice in a rich coconut curry with fresh herbs" loading="lazy" decoding="async" data-parallax="0.08">
+              </div>
+            </figure>
+            <div class="dish__body">
+              <p class="tag" data-reveal="up"><span class="tag__dot"></span>Chef's Pick</p>
+              <h3 class="dish__name" data-reveal="lines"><span class="line"><span>Tiger Prawn,</span></span><span class="line"><span><em>Coconut</em> Bisque</span></span></h3>
+              <p class="dish__desc" data-reveal="up">Grilled head-on prawns, a slow-roasted shell bisque scented with curry leaf, and fragrant steamed rice.</p>
+              <div class="dish__foot" data-reveal="up">
+                <span class="diet diet--non" title="Non-vegetarian"><i></i><span class="sr-only">Non-vegetarian</span></span>
+                <span class="price">₹2,850</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 3 -->
+          <article class="dish dish--3">
+            <span class="dish__num" aria-hidden="true">03</span>
+            <figure class="dish__fig" data-reveal="img">
+              <div class="frame frame--landscape" data-cursor="Taste">
+                <img src="assets/images/dishes/salmon-maki.jpg" alt="Sliced salmon maki rolls with sesame on a wooden board" loading="lazy" decoding="async" data-parallax="0.08">
+              </div>
+            </figure>
+            <div class="dish__body">
+              <p class="tag" data-reveal="up"><span class="tag__dot"></span>Chef's Pick</p>
+              <h3 class="dish__name" data-reveal="lines"><span class="line"><span>Cured Salmon,</span></span><span class="line"><span><em>Miso</em> &amp; Sesame</span></span></h3>
+              <p class="dish__desc" data-reveal="up">House-cured over three days, rolled with pickled cucumber and finished with toasted black sesame.</p>
+              <div class="dish__foot" data-reveal="up">
+                <span class="diet diet--non" title="Non-vegetarian"><i></i><span class="sr-only">Non-vegetarian</span></span>
+                <span class="price">₹1,950</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dish 4 -->
+          <article class="dish dish--4">
+            <span class="dish__num" aria-hidden="true">04</span>
+            <figure class="dish__fig" data-reveal="img">
+              <div class="frame frame--square" data-cursor="Taste">
+                <img src="assets/images/dishes/raspberry-cake.jpg" alt="A slice of layered raspberry and pistachio cake on a dark plate" loading="lazy" decoding="async" data-parallax="0.08">
+              </div>
+            </figure>
+            <div class="dish__body">
+              <p class="tag" data-reveal="up"><span class="tag__dot"></span>Chef's Sweet Finish</p>
+              <h3 class="dish__name" data-reveal="lines"><span class="line"><span>Raspberry</span></span><span class="line"><span><em>Pistachio</em> Entremet</span></span></h3>
+              <p class="dish__desc" data-reveal="up">Layers of vanilla sponge, wild raspberry cream and toasted pistachio, finished with fresh berries.</p>
+              <div class="dish__foot" data-reveal="up">
+                <span class="diet diet--veg" title="Vegetarian"><i></i><span class="sr-only">Vegetarian</span></span>
+                <span class="price">₹950</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="sig__cta" data-reveal="up">
+          <a class="btn btn--gold" href="#menu"><span>View Full Menu</span><i class="btn__arrow" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost" href="#reservations"><span>Reserve Your Table</span><i class="btn__arrow" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DINING EXPERIENCE ============ -->
+    <section class="exp" id="experience" aria-labelledby="exp-title">
+      <header class="exp__intro theme-espresso">
+        <div class="container exp__intro-inner">
+          <p class="eyebrow eyebrow--gold" data-reveal="up">03 — The Dining Experience</p>
+          <h2 class="sec-title" id="exp-title" data-reveal="lines">
+            <span class="line"><span>Three movements,</span></span>
+            <span class="line"><span>one <em>evening.</em></span></span>
+          </h2>
+        </div>
+      </header>
+
+      <article class="exp__panel" data-panel>
+        <div class="exp__bg"><img src="assets/images/restaurant/exp-atmosphere.jpg" alt="Spacious dining room with warm lighting, exposed beams and set tables" loading="lazy" decoding="async"></div>
+        <div class="exp__veil"></div>
+        <div class="container exp__inner">
+          <span class="exp__num" aria-hidden="true">01</span>
+          <div class="exp__text">
+            <p class="exp__count">01 / 03</p>
+            <h3 class="exp__title" data-reveal="lines"><span class="line"><span>The <em>Atmosphere</em></span></span></h3>
+            <p data-reveal="up">Low light, warm timber, the hush of linen. The room is designed to slow the evening down — forty seats, one long open pass, nothing hurried.</p>
+            <ul class="exp__list" data-reveal="up"><li>40 seats</li><li>Open pass</li><li>Late service</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp__panel exp__panel--right" data-panel>
+        <div class="exp__bg"><img src="assets/images/restaurant/exp-craft.jpg" alt="A chef working behind the pass in a professional open kitchen" loading="lazy" decoding="async"></div>
+        <div class="exp__veil"></div>
+        <div class="container exp__inner">
+          <span class="exp__num" aria-hidden="true">02</span>
+          <div class="exp__text">
+            <p class="exp__count">02 / 03</p>
+            <h3 class="exp__title" data-reveal="lines"><span class="line"><span>The <em>Craft</em></span></span></h3>
+            <p data-reveal="up">Behind the pass, a brigade moves with the quiet precision of a studio. Fire, smoke, ferment and patience — every technique in service of the ingredient.</p>
+            <ul class="exp__list" data-reveal="up"><li>Live-fire hearth</li><li>House ferments</li><li>Cured in-house</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp__panel" data-panel>
+        <div class="exp__bg"><img src="assets/images/restaurant/exp-flavour.jpg" alt="Grilled meat and roasted vegetables served on a plate with sauce" loading="lazy" decoding="async"></div>
+        <div class="exp__veil"></div>
+        <div class="container exp__inner">
+          <span class="exp__num" aria-hidden="true">03</span>
+          <div class="exp__text">
+            <p class="exp__count">03 / 03</p>
+            <h3 class="exp__title" data-reveal="lines"><span class="line"><span>The <em>Flavour</em></span></span></h3>
+            <p data-reveal="up">Bold where it should be, restrained where it must. Layered sauces, bright acidity and deep umami — flavours that arrive in sequence and linger long after.</p>
+            <ul class="exp__list" data-reveal="up"><li>Seasonal menu</li><li>Wine pairing</li><li>Chef's table</li></ul>
+            <a class="btn btn--gold exp__btn" href="#reservations"><span>Reserve Your Table</span><i class="btn__arrow" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu theme-light" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow" data-reveal="up">04 — The Menu</p>
+            <h2 class="sec-title" id="menu-title" data-reveal="lines">
+              <span class="line"><span>Written by</span></span>
+              <span class="line"><span>the <em>season.</em></span></span>
+            </h2>
+          </div>
+          <p class="sec-note" data-reveal="up">Menus change with the market. Please tell us about allergies when you book — our kitchen will gladly adapt.</p>
+        </header>
+
+        <div class="menu__tabs" role="tablist" aria-label="Menu categories" data-reveal="up"></div>
+
+        <div class="menu__layout">
+          <aside class="menu__preview" aria-hidden="true">
+            <div class="menu__frame">
+              <img class="menu__img" src="assets/images/menu/egg-avocado.jpg" alt="" decoding="async">
+              <div class="menu__plain">
+                <span class="menu__plain-cat"></span>
+                <span class="menu__plain-note">Ask your server for today's pairing.</span>
+              </div>
+            </div>
+            <p class="caption menu__caption">&nbsp;</p>
+          </aside>
+          <div class="menu__panel" id="menu-panel" role="tabpanel" tabindex="-1" aria-live="polite">
+            <ul class="menu__list"></ul>
+          </div>
+        </div>
+
+        <footer class="menu__foot" data-reveal="up">
+          <ul class="legend" aria-label="Dietary key">
+            <li><span class="diet diet--veg"><i></i></span> Vegetarian</li>
+            <li><span class="diet diet--egg"><i></i></span> Contains egg</li>
+            <li><span class="diet diet--non"><i></i></span> Non-vegetarian</li>
+            <li><span class="star" aria-hidden="true">✦</span> Chef's special</li>
+          </ul>
+          <a class="btn btn--dark" href="#reservations"><span>Reserve Your Table</span><i class="btn__arrow" aria-hidden="true"></i></a>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============ CHEF'S WORLD ============ -->
+    <section class="chef theme-espresso" id="story" aria-labelledby="chef-title">
+      <div class="container chef__grid">
+        <div class="chef__top">
+          <p class="eyebrow eyebrow--gold" data-reveal="up">05 — The Chef's World</p>
+          <h2 class="chef__title" id="chef-title" data-reveal="lines">
+            <span class="line"><span>Cooking is</span></span>
+            <span class="line"><span>the art of <em>subtraction.</em></span></span>
+          </h2>
+        </div>
+
+        <figure class="chef__portrait" data-reveal="img">
+          <div class="frame frame--chef" data-cursor="Chef">
+            <img src="assets/images/chef/chef-portrait.jpg" alt="Portrait of the executive chef in a dark apron, arms crossed" loading="lazy" decoding="async" data-parallax="0.06">
+          </div>
+          <figcaption class="caption">Chef Ren Takahashi, Executive Chef <span class="muted">(sample portrait)</span></figcaption>
+        </figure>
+
+        <div class="chef__text">
+          <p class="chef__intro dropcap" data-reveal="up">Trained in the kitchens of Kyoto, Lyon and Mumbai, Chef Ren brings a disciplined, ingredient-first philosophy to NOIR. Each dish begins with a single question: what can we take away?</p>
+          <blockquote class="chef__quote" data-reveal="up">
+            “A great plate is an argument won by subtraction.”
+            <cite>— Chef Ren Takahashi</cite>
+          </blockquote>
+          <ol class="chef__approach" data-stagger>
+            <li data-reveal="up"><span>Source</span><p>We know every grower by name. If a farmer cannot tell us when it was picked, it doesn't come in.</p></li>
+            <li data-reveal="up"><span>Season</span><p>No dish outlives its ingredient. When the first monsoon mangoes end, so does the dessert.</p></li>
+            <li data-reveal="up"><span>Subtract</span><p>Every plate is edited three times. What remains is only what makes it taste like itself.</p></li>
+          </ol>
+        </div>
+
+        <figure class="chef__kitchen" data-reveal="img">
+          <div class="frame frame--kitchen">
+            <img src="assets/images/chef/kitchen.jpg" alt="Two cooks preparing dishes together in a bright kitchen" loading="lazy" decoding="async" data-parallax="0.08">
+          </div>
+          <figcaption class="caption">In the kitchen — prep begins at 6 AM, daily.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery theme-light" id="gallery" aria-labelledby="gal-title">
+      <div class="container">
+        <header class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow" data-reveal="up">06 — Gallery</p>
+            <h2 class="sec-title" id="gal-title" data-reveal="lines">
+              <span class="line"><span>Light, fire</span></span>
+              <span class="line"><span>&amp; <em>timber.</em></span></span>
+            </h2>
+          </div>
+          <p class="sec-note" data-reveal="up">Select any image to view it full-screen. Use the arrow keys to browse, Esc to close.</p>
+        </header>
+
+        <div class="gallery__grid" id="gallery-grid">
+          <figure class="g-item g-1" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g1-architecture.jpg" alt="Industrial-chic restaurant interior with high beams, pendant lights and a mezzanine" loading="lazy" decoding="async"><span class="g-item__cap">Architecture — The main hall</span></button></figure>
+          <figure class="g-item g-2" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g2-terrace.jpg" alt="Open-air terrace with teal chairs overlooking the water at golden hour" loading="lazy" decoding="async"><span class="g-item__cap">Interiors — The terrace</span></button></figure>
+          <figure class="g-item g-3" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g3-brunch.jpg" alt="Overhead view of a brunch table with waffles, eggs, coffee and fresh dishes" loading="lazy" decoding="async"><span class="g-item__cap">Food — Sunday brunch</span></button></figure>
+          <figure class="g-item g-4" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g5-chef.jpg" alt="Smiling chef in whites and a tall hat standing in the dining room" loading="lazy" decoding="async"><span class="g-item__cap">Chef — Front of house</span></button></figure>
+          <figure class="g-item g-5" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g4-coffee.jpg" alt="Three hands raising latte art coffees together in a toast" loading="lazy" decoding="async"><span class="g-item__cap">Coffee — The morning ritual</span></button></figure>
+          <figure class="g-item g-6" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g6-table.jpg" alt="Overhead view of friends sharing burgers, fries and drinks at a table" loading="lazy" decoding="async"><span class="g-item__cap">Atmosphere — Shared tables</span></button></figure>
+          <figure class="g-item g-7" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g7-flame.jpg" alt="A chef flambéing a pan over a roaring flame in a professional kitchen" loading="lazy" decoding="async"><span class="g-item__cap">Chef — Fire at the pass</span></button></figure>
+          <figure class="g-item g-8" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g8-garden.jpg" alt="Restaurant tables set among hanging plants and warm string lights" loading="lazy" decoding="async"><span class="g-item__cap">Interiors — The garden room</span></button></figure>
+          <figure class="g-item g-9" data-reveal="img"><button type="button" class="g-item__btn" data-cursor="Open"><img src="assets/images/gallery/g9-pizza.jpg" alt="Wood-fired pizza sliced on a dark wooden board" loading="lazy" decoding="async"><span class="g-item__cap">Food — From the wood oven</span></button></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="reviews theme-olive" id="reviews" aria-labelledby="rev-title">
+      <div class="container reviews__grid">
+        <header class="reviews__head">
+          <p class="eyebrow eyebrow--light" data-reveal="up">07 — In Their Words</p>
+          <h2 class="sec-title sec-title--sm" id="rev-title" data-reveal="lines">
+            <span class="line"><span>Kind words,</span></span>
+            <span class="line"><span>quietly <em>earned.</em></span></span>
+          </h2>
+          <p class="sample-note" data-reveal="up"><strong>Sample content.</strong> These reviews are placeholders and will be replaced with genuine guest feedback.</p>
+        </header>
+
+        <div class="reviews__stage" data-reveal="up">
+          <div class="reviews__quotes" aria-live="polite"></div>
+          <div class="reviews__people" role="tablist" aria-label="Choose a review"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVATIONS ============ -->
+    <section class="resv theme-espresso" id="reservations" aria-labelledby="resv-title">
+      <div class="container resv__grid">
+        <div class="resv__intro">
+          <p class="eyebrow eyebrow--gold" data-reveal="up">08 — Reservations</p>
+          <h2 class="resv__title" id="resv-title" data-reveal="lines">
+            <span class="line"><span>Save a</span></span>
+            <span class="line"><span><em>seat</em> for us.</span></span>
+          </h2>
+          <p class="resv__lead" data-reveal="up">Tell us when you'd like to join us and we'll hold your table. For parties of nine or more, or private dining, please call us directly.</p>
+          <ul class="resv__facts" data-reveal="up">
+            <li><span>Dinner</span>7:00 PM – 11:30 PM</li>
+            <li><span>Lunch</span>12:30 PM – 3:30 PM</li>
+            <li><span>Closed</span>Mondays</li>
+          </ul>
+        </div>
+
+        <div class="resv__card" data-reveal="up">
+          <form class="form" id="resv-form" novalidate>
+            <div class="field">
+              <input type="text" id="f-name" name="name" placeholder=" " autocomplete="name" required aria-describedby="e-name">
+              <label for="f-name">Full name</label>
+              <span class="field__line" aria-hidden="true"></span>
+              <p class="field__err" id="e-name" role="alert"></p>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <input type="email" id="f-email" name="email" placeholder=" " autocomplete="email" required aria-describedby="e-email">
+                <label for="f-email">Email</label>
+                <span class="field__line" aria-hidden="true"></span>
+                <p class="field__err" id="e-email" role="alert"></p>
+              </div>
+              <div class="field">
+                <input type="tel" id="f-phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel" required aria-describedby="e-phone">
+                <label for="f-phone">Phone</label>
+                <span class="field__line" aria-hidden="true"></span>
+                <p class="field__err" id="e-phone" role="alert"></p>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field field--static">
+                <label for="f-date">Date</label>
+                <input type="date" id="f-date" name="date" required aria-describedby="e-date">
+                <span class="field__line" aria-hidden="true"></span>
+                <p class="field__err" id="e-date" role="alert"></p>
+              </div>
+              <div class="field field--static">
+                <label for="f-time">Time</label>
+                <select id="f-time" name="time" required aria-describedby="e-time">
+                  <option value="">Select a time</option>
+                  <optgroup label="Breakfast">
+                    <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                  </optgroup>
+                  <optgroup label="Lunch">
+                    <option>12:30 PM</option><option>1:30 PM</option><option>2:30 PM</option>
+                  </optgroup>
+                  <optgroup label="Dinner">
+                    <option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option>
+                    <option>9:00 PM</option><option>9:30 PM</option><option>10:00 PM</option><option>10:30 PM</option>
+                  </optgroup>
+                </select>
+                <span class="field__line" aria-hidden="true"></span>
+                <p class="field__err" id="e-time" role="alert"></p>
+              </div>
+            </div>
+
+            <fieldset class="guests" aria-describedby="e-guests">
+              <legend>Number of guests</legend>
+              <div class="guests__chips">
+                <label><input type="radio" name="guests" value="1"><span>1</span></label>
+                <label><input type="radio" name="guests" value="2"><span>2</span></label>
+                <label><input type="radio" name="guests" value="3"><span>3</span></label>
+                <label><input type="radio" name="guests" value="4"><span>4</span></label>
+                <label><input type="radio" name="guests" value="5"><span>5</span></label>
+                <label><input type="radio" name="guests" value="6"><span>6</span></label>
+                <label><input type="radio" name="guests" value="7"><span>7</span></label>
+                <label><input type="radio" name="guests" value="8"><span>8</span></label>
+              </div>
+              <p class="field__err" id="e-guests" role="alert"></p>
+            </fieldset>
+
+            <div class="field">
+              <textarea id="f-notes" name="notes" rows="2" placeholder=" " maxlength="400"></textarea>
+              <label for="f-notes">Special requests <span class="opt">(optional)</span></label>
+              <span class="field__line" aria-hidden="true"></span>
+            </div>
+
+            <button class="btn btn--gold btn--block" type="submit"><span>Request Reservation</span><i class="btn__arrow" aria-hidden="true"></i></button>
+            <p class="form__demo">Demo form: this static website validates your details in the browser only and does not send or store a booking. A live reservation system needs a backend or a booking service (for example Resy, OpenTable or your own API).</p>
+          </form>
+
+          <div class="confirm" id="resv-confirm" hidden tabindex="-1">
+            <svg class="confirm__tick" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="M19 33l9 9 17-20"/></svg>
+            <h3>Request received</h3>
+            <p class="confirm__who"></p>
+            <dl class="confirm__details"></dl>
+            <p class="confirm__ref">Reference <strong></strong></p>
+            <p class="confirm__demo">This is a demo confirmation. No booking has been made.</p>
+            <button class="btn btn--ghost" type="button" id="resv-reset"><span>Make another request</span><i class="btn__arrow" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOCATION ============ -->
+    <section class="visit theme-light" id="visit" aria-labelledby="visit-title">
+      <div class="container visit__grid">
+        <div class="visit__info">
+          <p class="eyebrow" data-reveal="up">09 — Find Us</p>
+          <h2 class="sec-title" id="visit-title" data-reveal="lines">
+            <span class="line"><span>Come in</span></span>
+            <span class="line"><span>from the <em>city.</em></span></span>
+          </h2>
+
+          <div class="visit__cols" data-stagger>
+            <div data-reveal="up">
+              <h3>Address</h3>
+              <address>NOIR<br>14 Lavelle Road<br>Bengaluru 560001, India</address>
+            </div>
+            <div data-reveal="up">
+              <h3>Contact</h3>
+              <p><a class="link-u" href="tel:+918040000000">+91 80 4000 0000</a><br><a class="link-u" href="mailto:reservations@noir.example">reservations@noir.example</a></p>
+            </div>
+            <div data-reveal="up">
+              <h3>Hours</h3>
+              <ul class="hours">
+                <li><span>Tue – Sun</span>8:00 AM – 11:30 AM</li>
+                <li><span>Tue – Sun</span>12:30 PM – 3:30 PM</li>
+                <li><span>Tue – Sun</span>7:00 PM – 11:30 PM</li>
+                <li><span>Monday</span>Closed</li>
+              </ul>
+            </div>
+            <div data-reveal="up">
+              <h3>Follow</h3>
+              <ul class="social">
+                <li><a class="link-u" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a class="link-u" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a class="link-u" href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a class="btn btn--dark" data-reveal="up" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lavelle+Road+Bengaluru+560001" target="_blank" rel="noopener noreferrer"><span>Get Directions</span><i class="btn__arrow" aria-hidden="true"></i></a>
+          <p class="sample-note sample-note--dark">Address and contact details are sample content.</p>
+        </div>
+
+        <div class="visit__media">
+          <figure class="visit__photo" data-reveal="img">
+            <div class="frame frame--visit">
+              <img src="assets/images/restaurant/location.jpg" alt="The NOIR dining room with warm pendant lights, wooden chairs and a staircase" loading="lazy" decoding="async" data-parallax="0.06">
+            </div>
+          </figure>
+          <div class="visit__map" data-reveal="up">
+            <iframe title="Map showing NOIR on Lavelle Road, Bengaluru" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+              src="https://www.google.com/maps?q=Lavelle+Road+Bengaluru+560001&amp;output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer theme-dark">
+    <div class="container">
+      <div class="footer__cta">
+        <p class="eyebrow eyebrow--gold">Tables fill quickly</p>
+        <a class="footer__reserve" href="#reservations"><span>Reserve your table</span><i aria-hidden="true">→</i></a>
+      </div>
+
+      <div class="footer__word" aria-hidden="true">NOIR</div>
+
+      <div class="footer__cols">
+        <nav aria-label="Footer">
+          <h3>Navigate</h3>
+          <ul>
+            <li><a class="link-u" href="#discover">Discover</a></li>
+            <li><a class="link-u" href="#experience">Experience</a></li>
+            <li><a class="link-u" href="#menu">Menu</a></li>
+            <li><a class="link-u" href="#story">Our Story</a></li>
+            <li><a class="link-u" href="#gallery">Gallery</a></li>
+            <li><a class="link-u" href="#reservations">Reservations</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>Visit</h3>
+          <p>14 Lavelle Road<br>Bengaluru 560001</p>
+          <p><a class="link-u" href="tel:+918040000000">+91 80 4000 0000</a><br><a class="link-u" href="mailto:reservations@noir.example">reservations@noir.example</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Tue – Sun<br>8:00 – 11:30 AM<br>12:30 – 3:30 PM<br>7:00 – 11:30 PM</p>
+          <p>Closed Mondays</p>
+        </div>
+        <div>
+          <h3>Follow</h3>
+          <ul>
+            <li><a class="link-u" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a class="link-u" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a class="link-u" href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__base">
+        <p>© <span id="year">2026</span> NOIR. All rights reserved.</p>
+        <p>Demo website · Sample content &amp; stock photography (Unsplash) · Designed by NexaWeb</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="lightbox__backdrop" data-lb-close></div>
+    <button class="lightbox__close" type="button" aria-label="Close image" data-lb-close>Close <span aria-hidden="true">✕</span></button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image"><span aria-hidden="true">←</span></button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image"><span aria-hidden="true">→</span></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__cap"><span class="lightbox__count"></span><span class="lightbox__text"></span></figcaption>
+    </figure>
+  </div>
+
+  <button class="to-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>
